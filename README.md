@@ -3,24 +3,10 @@ Build Aseprite using Github action
 
 # What should you do?
 - fork this repo
-- choose the platform you want to build
-  ```yaml
-  # file: .github/workflows/build_and_release.yaml
-  # ...
-  # lots of codes
-  # ...
-  build-aseprite:
-    name: Build Aseprite
-    needs: create-release
-    permissions:
-      contents: write
-    runs-on: ${{ matrix.os }}
-    strategy:
-        matrix:
-          os: [ windows-latest, ubuntu-latest, macOS-latest ] # <------- remove platform(s) you don't want
-  ```
 - **enable workflow `Build and release Aseprite` in `Actions -- Workflows`**
-- **update `BuildLog.md` and push** (This step triggers the building process. You definitely want to do this!)
+- click `Action > Build and release Aseprite > run workflow` as the figure shows
+  ![trigger the workflow](https://github.com/user-attachments/assets/5174f407-4daf-4e28-996e-5efb4f8751cb)
+  
 - now you should see the building process via `Actions` and you can find the product in `Release`
 
 accroding to [Eula](https://github.com/aseprite/aseprite/blob/main/EULA.txt) :
